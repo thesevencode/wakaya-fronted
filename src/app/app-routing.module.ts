@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
 import { PagesComponent } from './pages/pages.component';
 import { ClientComponent } from './client/client.component';
+
+import { LoginGuard } from './services/guards/login.guard';
 
 export const Approutes: Routes = [
   {
@@ -13,7 +16,19 @@ export const Approutes: Routes = [
         path: 'pages',
         loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
       }
-    ]
+    ],
+    canActivate: [LoginGuard]
+  },
+  {
+    path: '',
+    children: [
+      { path: '', redirectTo: '/', pathMatch: 'full' },
+      {
+        path: 'auth',
+        loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+      }
+    ],
+    // canActivate: [LoginGuard]
   },
   {
     path: '',

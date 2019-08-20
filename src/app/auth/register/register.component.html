@@ -1,0 +1,122 @@
+<div class="wky__body">
+    <div class="wky__container">
+        <div class="wky__text">
+            <span>We are <strong>WaKaYa</strong></span>
+            <span>Bienvenido otra vez, por favor ingrese sus datos</span>
+        </div>
+        <div class="wky__img">
+        </div>
+        <div class="wky__white_panel">
+            <form class="wky__form" [formGroup]="form" (ngSubmit)="sign_up()">
+                <p class="wky__form_title">Registrar Usuarios</p>
+                <p class="wky__border"></p>
+                <div class="wky__form_body">
+                    <div>
+                        <label for="">Nombre</label>
+                        <div>
+                            <input type="text" formControlName="name">
+                            <span *ngIf="form.get('name').invalid &&
+                          (form.get('name').dirty ||
+                          form.get('name').touched)">
+                            <app-errors
+                            *ngIf="form.controls['name'].errors.required">
+                            </app-errors>
+                          </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Apellidos</label>
+                        <div>
+                            <input type="text" formControlName="lastname">
+                            <span *ngIf="form.get('lastname').invalid &&
+                          (form.get('lastname').dirty ||
+                          form.get('lastname').touched)">
+                          <app-errors
+                            *ngIf="form.controls['lastname'].errors.required">
+                          </app-errors>
+                         </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Correo Electrónico</label>
+                        <div>
+                            <input type="email" formControlName="email">
+                            <span *ngIf="form.get('email').invalid &&
+                          (form.get('email').dirty ||
+                          form.get('email').touched)">
+                            <app-errors
+                              *ngIf="form.controls['email'].errors.required">
+                            </app-errors>
+                            <app-errors
+                              errorMessage = "Correo electrónico incorrecto"
+                              *ngIf="form.controls['email'].errors.email">
+                            </app-errors>
+                         </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Contraseña</label>
+                        <div>
+                            <input type="password" formControlName="password">
+                            <span *ngIf="form.get('password').invalid &&
+                          (form.get('password').dirty ||
+                          form.get('password').touched)">
+                            <app-errors
+                              *ngIf="form.controls['password'].errors.required">
+                            </app-errors>
+                            <app-errors
+                              errorMessage = "Contraseña insegura"
+                              *ngIf="form.controls['password'].errors.pattern">
+                            </app-errors>
+                         </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Confirmar Contraseña</label>
+                        <div>
+                            <input type="password" formControlName="password2">
+                            <span *ngIf="form.get('password2').invalid &&
+                          (form.get('password2').dirty ||
+                          form.get('password2').touched)">
+                            <app-errors
+                              *ngIf="form.controls['password2'].errors.required">
+                            </app-errors>
+                            <app-errors
+                              errorMessage = "Las contraseñas no coinciden"
+                              *ngIf="form.controls['password2'].errors.mismatch">
+                            </app-errors>
+                         </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Tipo de usuario</label>
+                        <div class="wky__radio">
+                            <span class="wky__container_radio">Cliente
+                           <input type="radio" checked="checked" formControlName="type" name="type" value="client">
+                           <span class="wky__checkradio"></span>
+                            </span>
+                            <span class="wky__container_radio">Vendedor
+                           <input type="radio" name="radio" formControlName="type" name="type" value="producer">
+                           <span class="wky__checkradio"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">&nbsp;</label>
+                        <span class="wky__container_checkbox">Acepto las condiciones
+                       <input formControlName="terms" type="checkbox" checked="checked">
+                       <span class="wky__checkcheckbox"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="wky__form_footer">
+                    <button type="submit">Registrar</button>
+                    <button type="button" routerLink="/auth/login">Login</button>
+                </div>
+                <p class="wky__text_bot">
+                    Una cuenta. Todos los servicios de WaKaYa a tu disposición
+                </p>
+            </form>
+        </div>
+    </div>
+</div>

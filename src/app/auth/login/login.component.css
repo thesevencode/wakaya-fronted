@@ -1,0 +1,498 @@
+/* .wky__session_container {
+    width: 1000px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background: #fff;
+}
+.wky__session_container:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.wky__row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.wky__box {
+    padding: 1em;
+    width: 100%;
+}
+.wky__box_triangle_left {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    left: 0;
+    border-top: 300px solid #2abb9b;
+    border-right: 1000px solid transparent;
+}
+.wky__box_triangle_right {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    left: 0;
+    border-top: 350px solid #ffc244;
+    border-left: 1000px solid transparent;
+}
+.wky__form {
+    max-width: 300px;
+    margin: auto;
+    background: rgb(255,255,255);
+    border: 1px solid rgb(245, 245, 245);
+    padding: 1em 25px !important;
+    position: relative;
+    margin-top: 70px;
+    box-shadow: 0 2px 2px rgba(218, 215, 210, 0.5);
+}
+
+
+
+
+.wky__form_header {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid #f3f3f3;
+    justify-content: space-around;
+}
+.wky__form_header li a {
+    margin: 7px 10px;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+    color: #2abb9b;
+    text-align: center;
+
+}
+
+.wky__form_group {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+.wky__form_group p {
+    position: relative;
+}
+.wky__label_group {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+    color: #5f5f5fd1;
+}
+
+.wky__input_group{
+    display: block;
+    width: 100%;
+    line-height: 1;
+    color: #5f5f5fd1;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 0.25rem;
+    font-size: 13px !important;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+}
+.wky__container_checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.wky__container_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.wky__checkmark_checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+.wky__container_checkbox:hover input ~ .wky__checkmark_checkbox {
+    background-color: #ccc;
+}
+.wky__container_checkbox input:checked ~ .wky__checkmark_checkbox {
+    background-color: #2abb9b;
+}
+.wky__checkmark_checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.wky__container_checkbox input:checked ~ .wky__checkmark_checkbox:after {
+    display: block;
+}
+.wky__container_checkbox .wky__checkmark_checkbox:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+ .wky__type_of_users {
+    display: flex;
+    justify-content: space-around;
+  }
+  .wky__user_container{
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+    transition: 0.5s;
+    border-radius: 50%;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    background: transparent;
+    cursor: pointer;
+  }
+  .wky__user_container span {
+      font-size: 13px;
+    color: #5f5f5fd1;
+    position: relative;
+    bottom: 15px;
+  }
+  .wky__user_container:hover {
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.5);
+  }
+  .wky__user_container input:checked ~ .wky__span_text {
+    color: #2abb9b !important;
+    font-weight: bold;
+
+    }
+  .wky__user_container input{
+      display: none;
+  }
+  .wky__user_img {
+    width: 85%;
+  }
+
+
+
+
+
+
+
+
+
+
+.wky__from_footer {
+    box-sizing: border-box;
+}
+.wky__btn {
+    display: block;
+    letter-spacing: .03em;
+    height: 41px;
+    overflow: hidden;
+    padding: 0 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    outline: none;
+    color: #5f5f5fd1;
+    text-decoration: none;
+    width: 100%;
+}
+.wky__btn_sm {
+    height: 31px;
+    font-size: 12px;
+}
+
+.wky__btn_2abb9b {
+    background-color: transparent;
+    border: 1.5px solid #2abb9b;
+}
+.wky__btn_2abb9b:hover {
+    background-color: #2abb9b;
+    color: #fff;
+} */
+
+.wky__body {
+    background: var(--blue_5);
+    height: 650px;
+    width: 100%;
+    position: relative;
+}
+
+.wky__text span {
+    color: var(--white_0);
+    display: block;
+}
+
+.wky__text span:first-child {
+    font-size: 30px;
+}
+
+.wky__text span:last-child {
+    font-size: 15px;
+}
+
+.wky__img {
+    width: 900px;
+    margin: auto;
+    height: 450px;
+    background: url(../../../assets/img/bg-img-login.jpg);
+    background-size: cover;
+    position: relative;
+    top: 50px;
+}
+
+.wky__white_panel {
+    background: var(--white_0);
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    top: 70px;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 3px var(--gray_3);
+}
+
+.wky__form .wky__form_title {
+    text-align: center;
+    color: var(--orange_0);
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.wky__form .wky__border {
+    background: var(--orange_0);
+    width: 100%;
+    height: 3px;
+    box-shadow: 0px 2px 3px var(--gray_0);
+}
+
+.wky__form .wky__form_body {
+    margin-top: 25px;
+    border: 1px solid var(--gray_0);
+    border-radius: 0 10px 10px 0;
+}
+
+.wky__form .wky__form_body>div {
+    position: relative;
+    padding: 3px 10px;
+}
+
+.wky__form .wky__form_body>div label {
+    display: block;
+    font-size: 14px;
+    color: var(--gray_3);
+}
+
+.wky__form .wky__form_body>div {
+    border-bottom: 1px solid var(--gray_0);
+}
+
+.wky__form .wky__form_body>div:last-child {
+    border-bottom: none;
+}
+
+.wky__form .wky__form_body>div>div {
+    padding: 0 5px;
+}
+
+.wky__form .wky__form_body>div>div input {
+    width: 100%;
+    padding: 0 5px;
+    border: none;
+    outline: inherit;
+    color: var(--blue_5);
+}
+
+
+/* ---------------------inuts  */
+
+.wky__radio {
+    display: flex;
+    justify-content: space-around;
+}
+
+.wky__container_radio {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--blue_5);
+    font-size: 14px;
+}
+
+.wky__container_radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    top: 5px;
+    left: -19px;
+    z-index: 1;
+}
+
+.wky__checkradio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.wky__container_radio:hover input~.wky__checkradio {
+    background-color: #ccc;
+}
+
+.wky__container_radio input:checked~.wky__checkradio {
+    background-color: var(--orange_0);
+}
+
+.wky__checkradio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.wky__container_radio input:checked~.wky__checkradio:after {
+    display: block;
+}
+
+.wky__container_radio .wky__checkradio:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/*-----------------------*/
+
+.wky__container_checkbox {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+    user-select: none;
+    color: var(--blue_5);
+    font-size: 14px;
+}
+
+.wky__container_checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    top: 5px;
+    left: 5px;
+    z-index: 1;
+}
+
+
+/* Create a custom checkbox */
+
+.wky__checkcheckbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.wky__container_checkbox:hover input~.wky__checkcheckbox {
+    background-color: #ccc;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.wky__container_checkbox input:checked~.wky__checkcheckbox {
+    background-color: var(--orange_0);
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.wky__checkcheckbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.wky__container_checkbox input:checked~.wky__checkcheckbox:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.wky__container_checkbox .wky__checkcheckbox:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.wky__form aside {
+    margin-top: 20px;
+}
+
+.wky__form aside a {
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wky__form_footer {
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wky__form_footer button {
+    width: 80px;
+    padding: 7px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 3px var(--gray_0);
+    cursor: pointer;
+}
+
+.wky__form_footer button:first-child {
+    color: var(--white_0);
+    background: var(--orange_0);
+}
+
+.wky__form_footer button:last-child {
+    background: var(--white_0);
+    color: var(--orange_0);
+    border: 1px solid var(--orange_0);
+}
+
+.wky__text_bot {
+    font-size: 14px;
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: var(--blue_5);
+}

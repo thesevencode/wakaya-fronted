@@ -1,0 +1,35 @@
+<div class="wky__navbar">
+    <div class="wky__container">
+        <div class="wky__nav">
+            <div class="wky__logo_name">
+                <a href=""><i class="fa fa-won-sign"></i></a>
+                <span>WaKaYa</span>
+            </div>
+            <ul class="wky__navbar_nav">
+                <li routerLinkActive="wky__active"><a routerLink="/home/inicio">Home</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contactar</a></li>
+                <li>
+                    <form>
+                        <button type="btn">
+                      <i class="fas fa-search"></i>
+                  </button>
+                        <input type="text" placeholder="Buscar...">
+                    </form>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Lenguaje <span class="caret"></span></a>
+                    <ul class="dropdown-menu" style="display: none">
+                        <li><a href="#">Español</a></li>
+                        <li><a href="#">English</a></li>
+                        <li><a href="#">中國</a></li>
+                    </ul>
+                </li>
+                <!-- class="wky__active" -->
+                <li routerLinkActive="wky__active"><a [routerLink]="['/auth/register']" class="wky__bold">Registrar</a></li>
+                <li routerLinkActive="wky__active"><a [routerLink]="['/auth/login']" class="wky__bold">Acceder</a></li>
+            </ul>
+        </div>
+    </div>
+</div>

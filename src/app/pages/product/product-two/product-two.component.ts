@@ -34,7 +34,19 @@ export class ProductTwoComponent implements OnInit {
 
   public createProduct() {
 
-    this.productService.createProduct(this.product)
+    this.productService.createProduct(this.product);
+
+    this.uploadImages = [];
+    this.product = {
+      name: '',
+      description: '',
+      categories: [],
+      url: [],
+      price: '',
+      stock: '',
+      type: 'image',
+
+    };
     // .then(res => {
 
     //   console.log(res);

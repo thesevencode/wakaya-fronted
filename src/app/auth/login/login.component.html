@@ -1,0 +1,55 @@
+<div class="wky__body">
+    <div class="wky__container">
+        <div class="wky__text">
+            <span>We are <strong>WaKaYa</strong></span>
+            <span>Bienvenido otra vez, por favor inicie sesión</span>
+        </div>
+        <div class="wky__img">
+        </div>
+        <div class="wky__white_panel">
+            <form class="wky__form" ngNativeValidate #f="ngForm" (submit)="sign_in(f)">
+                <p class="wky__form_title">Iniciar Sesión</p>
+                <p class="wky__border"></p>
+                <div class="wky__form_body">
+                    <div>
+                        <label for="">Correo electrónico</label>
+                        <div>
+                            <input type="email" [(ngModel)]="email" name="email" #refEmail="ngModel" required>
+                            <app-errors *ngIf="refEmail.invalid &&
+                          (refEmail.dirty ||
+                          refEmail.touched)">
+                            </app-errors>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">Contraseña</label>
+                        <div>
+                            <input type="password" ngModel name="password" #refPassword="ngModel" required>
+                            <app-errors *ngIf="refPassword.invalid &&
+                            (refPassword.dirty ||
+                            refPassword.touched)">
+                            </app-errors>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="">&nbsp;</label>
+                        <span class="wky__container_checkbox">Recordar Cuenta
+                       <input type="checkbox" [(ngModel)]="remember" name="remember" checked="checked">
+                       <span class="wky__checkcheckbox"></span>
+                        </span>
+                    </div>
+                </div>
+                <aside>
+                    <a href="">¿Olvidaste tu contraseña?</a>
+                </aside>
+                <div class="wky__form_footer">
+                    <button type="submit">Acceder</button>
+                    <button type="button" routerLink="/auth/register">Registrar</button>
+                </div>
+                <p class="wky__text_bot">
+                    Una cuenta. Todos los servicios de WaKaYa a tu disposición
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
