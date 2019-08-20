@@ -50,4 +50,8 @@ export class ProductService {
     return this.http.post(URL + '/product/by_categories', { categories }).toPromise();
   }
 
+  getById(_id){
+    return this.http.get(URL + '/product/id_product/'+_id).toPromise();
+  }
+
 }

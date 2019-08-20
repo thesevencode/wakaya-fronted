@@ -10,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 export class ProductListComponent implements OnInit {
   categories = [];
   productos = [];
+  categories_selected = [];
 
 
   constructor(
@@ -20,8 +21,22 @@ export class ProductListComponent implements OnInit {
   ngOnInit() {
     this.getCategories();
     this.getAllProduct();
-    this.getProductsByCategories();
+    // this.getProductsByCategories();
   }
+
+  filterByCategorie(categorie){
+    const existing = this.categories_selected.indexOf(categorie);
+
+    if (existing < 0) {
+      this.categories_selected.push(categorie);
+    } else if (existing > 0 || existing === 0) {
+      this.categories_selected.splice(existing, 1);
+    }
+
+    return this.categories_selected.length == 0  ? this.getAllProduct() : this.getProductsByCategories();
+
+  }
+
 
   getCategories() {
     this.categorieService.getAllCategories()
@@ -30,16 +45,18 @@ export class ProductListComponent implements OnInit {
       });
   }
 
+
+
   getAllProduct(){
     this.productService.getAll()
       .then(res => {
-        this.productos = ['item'];
+        this.productos = res['item'];
       });
   }
   getProductsByCategories(){
-    this.productService.getByCategories(['licor'])
+    this.productService.getByCategories(this.categories_selected)
       .then(res => {
-        console.log("res:", res);
+        this.productos = res['item'];
       });
   }
 
