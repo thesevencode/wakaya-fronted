@@ -22,8 +22,6 @@ export class ProductTwoComponent implements OnInit {
 
   };
 
-  public formData = new FormData();
-
   constructor(
     private router: Router,
     private productService: ProductService
@@ -36,13 +34,13 @@ export class ProductTwoComponent implements OnInit {
 
   public createProduct() {
 
-    this.productService.createProduct({ product: this.product, formdata: this.formData })
-      .then(res => {
+    this.productService.createProduct(this.product)
+    // .then(res => {
 
-        console.log(res);
-      })
-      .catch(e => {
-      });
+    //   console.log(res);
+    // })
+    // .catch(e => {
+    // });
   }
 
   public beforeStep() {
@@ -50,12 +48,12 @@ export class ProductTwoComponent implements OnInit {
   }
 
   public loadImages(files) {
-    let i = 0;
+
     if (files.length === 0) {
       return;
     }
 
-
+    this.product.url = files;
     this.uploadImages = [];
 
     if (!files) {
@@ -67,7 +65,7 @@ export class ProductTwoComponent implements OnInit {
 
     for (const element of files) {
       const reader = new FileReader();
-      this.formData.append('image' + (i += 1), element);
+
 
       reader.readAsDataURL(element);
 
@@ -79,6 +77,9 @@ export class ProductTwoComponent implements OnInit {
     }
 
 
+
+
+
     // if (archivo.type.indexOf('image') < 0) {
     //   swal('Sólo imágenes', 'El archivo seleccionado no es una imagen', 'error');
     //   this.imagenSubir = null;
@@ -87,10 +88,6 @@ export class ProductTwoComponent implements OnInit {
 
 
     // console.log(reader.readAsDataURL(file[0]));
-
-
-
-    // console.log(tempImages);
 
 
 
