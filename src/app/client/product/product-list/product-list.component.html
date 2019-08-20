@@ -3,7 +3,7 @@
 
         <div class="funkyradio">
             <div *ngFor="let c of categories" class="funkyradio-success">
-                <input type="checkbox" name="checkbox" id="{{c._id}}"/>
+                <input type="checkbox" name="checkbox" id="{{c._id}}" (click)="filterByCategorie(c.description)"/>
                 <label for="{{c._id}}"> {{c.description}}</label>
             </div>
 
@@ -27,24 +27,24 @@
                   </ul>
               </div>
               <div class="wky__card__footer">
-                  <span class="wky__last_price"> {{p.price}} </span>
-                  <span class="wky__price"> {{p.price}} <span class="wky__decimal">99</span></span>
+                  <!-- <span class="wky__last_price"> {{p.price}} </span> -->
+                  <span class="wky__price"> {{p.price}}</span>
                   <div class="wky__card_content">
-                  <p>{{ p.description}}</p>
-                  <p class="wky__card_stars">
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                      <span><i class="fas fa-star"></i></span>
-                  </p>
-                  <p>20 vendidos</p>
-              </div>
-                  <div class="wky__card_buttons">
-                      <div><a href=""><i class="fas fa-star"></i></a></div>
-                      <div><a href=""><i class="fas fa-plus"></i></a></div>
-                      <div><a href=""><i class="fas fa-check"></i></a></div>
-                  </div>
+                    <a href="cliente/producto/{{p._id}}"><p>{{ p.description}}</p></a>
+                    <p>{{ p.categories}}</p>
+                    <p class="wky__card_stars">
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                        <span><i class="fas fa-star"></i></span>
+                    </p>
+                </div>
+                <div class="wky__card_buttons">
+                    <div><a ><i class="fas fa-star"></i></a></div>
+                    <!-- <div><a href=""><i class="fas fa-plus"></i></a></div> -->
+                    <!-- <div><a href=""><i class="fas fa-check"></i></a></div> -->
+                </div>
               </div>
           </div>
 

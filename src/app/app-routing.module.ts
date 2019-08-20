@@ -21,7 +21,7 @@ export const Approutes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       {
-        path: 'client',
+        path: 'cliente',
         loadChildren: () => import('./client/client.module').then(m => m.ClientModule)
       }
     ]
