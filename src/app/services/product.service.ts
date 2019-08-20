@@ -37,4 +37,13 @@ export class ProductService {
 
     // return this.http.post<any>(`${this.url}?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjVkNTJhYzUzNjUxMDhlNmYwODNiYzEzYiIsImVtYWlsIjoianVhbi4xNTEyMTAwMUBnbWFpbC5jb20iLCJ0eXBlIjoicHJvZHVjZXIiLCJ0ZXJtcyI6dHJ1ZSwiYWN0aXZhdGUiOnRydWUsImNyZWF0ZWRBdCI6IjIwMTktMDgtMTNUMTI6MjU6NTUuNDA3WiIsInVwZGF0ZWRBdCI6IjIwMTktMDgtMTNUMTM6MDI6NTMuNzA1WiIsIl9fdiI6MH0sInBlcm1pc3Npb25zIjpbInVzZXI6d3JpdGUiLCJ1c2VyOnJlYWQiXSwiaWF0IjoxNTY2Mjc1NTYyLCJleHAiOjE1NjYyODk5NjJ9.JxWi4tqc4_E-BT1QuG78geoAQ0A73LS4AL_v_Dk-q0E`, product).toPromise();
   }
+
+  getAll(){
+    return this.http.get(URL + '/product').toPromise();
+  }
+
+  getByCategories(categories){
+    return this.http.post(URL + '/product/by_categories', { categories }).toPromise();
+  }
+
 }

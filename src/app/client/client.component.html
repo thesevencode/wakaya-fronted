@@ -1,0 +1,42 @@
+<!-- <app-header>
+</app-header>
+<app-sidebar></app-sidebar>
+<main class="wky__pages">
+    <app-breadcrumbs></app-breadcrumbs>
+    <div class="row">
+        <div class="col-md-12">
+
+        </div>
+    </div>
+
+</main> -->
+
+<div class="d-flex" id="wrapper">
+
+    <!-- Sidebar -->
+    <app-sidebar></app-sidebar>
+    <!-- /#sidebar-wrapper -->
+
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+        <app-header></app-header>
+        <div class="container-fluid content-client" >
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+
+<!-- Bootstrap core JavaScript -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Menu Toggle Script -->
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+</script>

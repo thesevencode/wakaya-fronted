@@ -1,0 +1,279 @@
+.wky__card_left {
+  background: var(--white_0);
+  margin: 0px 20px;
+  border-radius: 15px;
+  box-shadow: 0px 2px 4px var(--gray_3);
+  border-bottom: 15px solid var(--orange_0);
+  height: 500px;
+}
+.wky__cards_right {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.wky__row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.wky__cards_right .wky__card {
+  margin: 5px 0px;
+  width: 200px;
+  height: 350px;
+  background: var(--white_0);
+  box-shadow: 0px 2px 4px var(--gray_0);
+  border-radius: 10px;
+  border-bottom: 10px solid var(--orange_0);
+}
+.wky__cards_right .wky__card .wky__card_body {
+  text-align: center;
+  position: relative;
+  border-bottom: 2px solid var(--skyblue_0);
+
+}
+.wky__cards_right .wky__card .wky__card_body img {
+  height: 200px;
+
+}
+
+.wky__card_body ul {
+  position: absolute;
+  list-style: none;
+  top: 0;
+  right: -10px;
+}
+.wky__card_body ul li:first-child{
+  background: var(--orange_0);
+  color: var(--white_0);
+  font-size: 14px;
+  padding: 2px;
+  margin-top: 10px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px var(--gray_0);
+}
+.wky__card_body ul li:first-child:after {
+  content: '';
+  border: 5px solid transparent;
+  border-left-color: var(--orange_0);
+  border-top-color: var(--orange_0);
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  transition: all .3s ease-out;
+}
+/*
+.wky__card_body ul li:nth-child(2){
+  background: var(--orange_0);
+  color: var(--white_0);
+  font-size: 14px;
+  padding: 2px;
+  margin-top: 10px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px var(--gray_0);
+}
+.wky__card_body ul li:nth-child(2):after {
+  content: '';
+  border: 5px solid transparent;
+  border-left-color: var(--orange_0);
+  border-top-color: var(--orange_0);
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  transition: all .3s ease-out;
+}
+*/
+.wky__card_body ul li:last-child{
+  background: var(--yellow_0);
+  color: var(--white_0);
+  font-size: 14px;
+  padding: 2px;
+  margin-top: 10px;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 2px var(--gray_0);
+}
+.wky__card_body ul li:last-child:after {
+  content: '';
+  border: 5px solid transparent;
+  border-left-color: var(--yellow_0);
+  border-top-color: var(--yellow_0);
+  position: absolute;
+  bottom: -6px;
+  right: 0;
+  transition: all .3s ease-out;
+}
+
+.wky__card__footer {
+  padding: 5px;
+  position: relative;
+}
+.wky__last_price {
+  font-size: 15px;
+  color: var(--gray_3);
+  position:absolute;
+  top: -40px;
+  left: 0;
+}
+.wky__price {
+  border-radius: 20px;
+  padding: 3px;
+  position: absolute;
+  top: -15px;
+  background: var(--white_0);
+  font-weight: bold;
+  color: var(--orange_0);
+  font-size: 18px;
+}
+.wky__decimal {
+  font-size: 12px;
+  position: relative;
+  top: 0;
+  font-weight: normal;
+}
+.wky__card_content {
+  margin-top: 10px;
+}
+.wky__card_content p {
+  font-size: 14px;
+  color: var(--gray_3);
+}
+.wky__card_stars {
+  color: var(--yellow_0) !important;
+}
+.wky__card_buttons {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+.wky__card_buttons div {
+  display: block;
+  padding: 8px;
+  margin-top: 6px;
+  box-shadow: 0px 2px 4px var(--gray_3);
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+}
+.wky__card_buttons div:first-child {
+  background: var(--yellow_0);
+}
+.wky__card_buttons div:nth-child(2) {
+  background: var(--blue_0);
+}
+.wky__card_buttons div:last-child {
+  background: var(--orange_0);
+}
+.wky__card_buttons a {
+  color: var(--white_0);
+}
+
+
+.funkyradio div {
+  clear: both;
+  overflow: hidden;
+}
+
+.funkyradio label {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid #D1D3D4;
+  font-weight: normal;
+}
+
+.funkyradio input[type="radio"]:empty,
+.funkyradio input[type="checkbox"]:empty {
+  display: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label,
+.funkyradio input[type="checkbox"]:empty ~ label {
+    position: relative;
+    line-height: 2.5em;
+    text-indent: 3.25em;
+    margin-top: 1em;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label:before,
+.funkyradio input[type="checkbox"]:empty ~ label:before {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 2.5em;
+  background: #D1D3D4;
+  border-radius: 3px 0 0 3px;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label {
+  color: #888;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before,
+.funkyradio input[type="checkbox"]:hover:not(:checked) ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #C2C2C2;
+}
+
+.funkyradio input[type="radio"]:checked ~ label,
+.funkyradio input[type="checkbox"]:checked ~ label {
+  color: #777;
+}
+
+.funkyradio input[type="radio"]:checked ~ label:before,
+.funkyradio input[type="checkbox"]:checked ~ label:before {
+  content: '\2714';
+  text-indent: .9em;
+  color: #333;
+  background-color: #ccc;
+}
+
+.funkyradio input[type="radio"]:focus ~ label:before,
+.funkyradio input[type="checkbox"]:focus ~ label:before {
+  box-shadow: 0 0 0 3px #999;
+}
+
+.funkyradio-default input[type="radio"]:checked ~ label:before,
+.funkyradio-default input[type="checkbox"]:checked ~ label:before {
+  color: #333;
+  background-color: #ccc;
+}
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before,
+.funkyradio-primary input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #337ab7;
+}
+
+.funkyradio-success input[type="radio"]:checked ~ label:before,
+.funkyradio-success input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #5cb85c;
+}
+
+.funkyradio-danger input[type="radio"]:checked ~ label:before,
+.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+.funkyradio-warning input[type="radio"]:checked ~ label:before,
+.funkyradio-warning input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #f0ad4e;
+}
+
+.funkyradio-info input[type="radio"]:checked ~ label:before,
+.funkyradio-info input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #5bc0de;
+}
