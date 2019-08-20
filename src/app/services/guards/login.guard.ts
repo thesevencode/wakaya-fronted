@@ -23,7 +23,7 @@ export class LoginGuard implements CanActivate {
       return true;
     } else {
       console.log('bloueado por el guard');
-      this.router.navigate(['/auth/login']);
+      this.router.navigate(['/home/login']);
       return false;
     }
   }

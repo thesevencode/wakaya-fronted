@@ -24,7 +24,7 @@ export const Approutes: Routes = [
     children: [
       { path: '', redirectTo: '/', pathMatch: 'full' },
       {
-        path: 'auth',
+        path: 'home',
         loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
       }
     ],

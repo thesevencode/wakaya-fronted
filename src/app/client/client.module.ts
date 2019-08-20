@@ -13,6 +13,10 @@ import { ProductListComponent } from './product/product-list/product-list.compon
   imports: [
     CommonModule,
     ClientRoutingModule
+  ],
+  exports : [
+    ProductDetailComponent,
+    ProductListComponent
   ]
 })
 export class ClientModule { }

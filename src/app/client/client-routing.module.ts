@@ -19,18 +19,18 @@ const routes: Routes = [
           ]
         }
       },
-      {
-        path: 'producto/:id',
-        component: ProductDetailComponent,
-        data: {
-          title: 'Product',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'PagesComponent' },
-            { title: 'product' }
-          ]
-        }
-      }
+      // {
+      //   path: 'producto/:id',
+      //   component: ProductDetailComponent,
+      //   data: {
+      //     title: 'Product',
+      //     urls: [
+      //       { title: 'Dashboard', url: '/dashboard' },
+      //       { title: 'PagesComponent' },
+      //       { title: 'product' }
+      //     ]
+      //   }
+      // }
     ]
   }
 ];

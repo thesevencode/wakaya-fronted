@@ -8,7 +8,7 @@
             <ul class="wky__navbar_nav">
                 <li routerLinkActive="wky__active"><a routerLink="/home/inicio">Home</a></li>
                 <li><a href="#">Servicios</a></li>
-                <li><a href="#">Productos</a></li>
+                <li routerLinkActive="wky__active"><a [routerLink]="['/home/productos']">Productos</a></li>
                 <li><a href="#">Contactar</a></li>
                 <li>
                     <form>

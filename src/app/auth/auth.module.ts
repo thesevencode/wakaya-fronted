@@ -14,7 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { ErrorsComponent } from '../components/errors/errors.component';
 
 
-
+import { ClientModule } from '../client/client.module';
 
 
 @NgModule({
@@ -29,7 +29,8 @@ import { ErrorsComponent } from '../components/errors/errors.component';
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forChild(AuthRoutes),
-    SharedModule
+    SharedModule,
+    ClientModule
   ]
 })
 export class AuthModule { }
