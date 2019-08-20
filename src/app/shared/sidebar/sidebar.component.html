@@ -1,0 +1,31 @@
+<!-- Sidebar -->
+<div class="border-right wky__sidebar collapse" id="sidebar-wrapper" aria-labelledby="menu-toggle">
+    <div class="sidebar-heading wky__logo_name">
+        <img src="../../../assets/img/logo-light-icon.png" alt=" ">
+        <span>WaKaYa</span>
+    </div>
+    <div class="list-group list-group-flush wky__menu ">
+        <div class="wky__user ">
+            <img src="../../../assets/img/3.jpg" alt=" ">
+            <span>Ciro Yupanqui</span>
+            <span><i class="fas fa-chevron-right "></i></span>
+        </div>
+        <ul class="wky__menu ">
+            <li>
+                <i class="fab fa-adn "></i>
+                <a [routerLink]="['/routePath']">Dashboard</a>
+            </li>
+
+            <li>
+                <i class="fab fa-adn "></i>
+                <a [routerLink]="['/pages/product-one']">Producto</a>
+            </li>
+
+            <li>
+                <span><i class="fab fa-adn "></i></span>
+                <span><a (click)="logout() ">Cerrar Sesión</a> </span>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- /#sidebar-wrapper -->

@@ -1,0 +1,39 @@
+<div class="container wky__sell_card">
+    <div class="wky__sell_header">
+        <p>
+            <strong>¡Hola!</strong>
+        </p>
+        <p>
+            ¿Qué vas a publicar?
+        </p>
+    </div>
+    <div class="wky__sell_body">
+        <div class="wky__sell_row">
+            <div class="wky__sell_category" *ngFor="let b of allCategories" (click)="selectCategorie(b.description)">
+                <p>
+                    {{b.description}}
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="wky__sell_body">
+        <p>Categorias seleccionadas</p>
+        <div class="wky__sell_row">
+            <button type="button" class="btn btn-outline-warning" *ngFor="let item of selectedCategories" disabled>{{item}}</button>
+
+        </div>
+    </div>
+
+    <div class="wky__sell_footer">
+        <div class="wky__big_button">
+
+            <div class="wky__cards_button">
+                <div class="wky__color_blue" (click)="nextStep()" style="cursor:pointer">
+                    Continuar
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

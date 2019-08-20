@@ -1,0 +1,80 @@
+<div class="wky__sell_card">
+    <div class="wky__sell_header">
+        <p>
+            <strong>¡Empecemos!</strong>
+        </p>
+        <p>
+            Describe todo tu producto
+        </p>
+    </div>
+    <div class="wky__sell_body">
+        <div class="wky__sell_ask">
+            <p><strong>Escribe el nombre de tu producto</strong></p>
+            <p>
+                <input type="text" placeholder="Ejem: miel de abeja de la antartida" [(ngModel)]="product.name">
+            </p>
+        </div>
+
+        <div class="wky__sell_ask">
+            <p><strong>Stock</strong></p>
+            <p>
+                <input type="text" placeholder="Ejmplo: 4" [(ngModel)]="product.stock">
+            </p>
+        </div>
+
+        <div class="wky__sell_ask">
+            <p><strong>Precio</strong></p>
+            <p>
+                <input type="text" placeholder="Ejmplo: 35.50" [(ngModel)]="product.price">
+            </p>
+        </div>
+
+        <div class="wky__sell_ask">
+            <div class="form-group">
+                <p><strong>Descripcion</strong></p>
+                <p>
+                    <textarea class="form-control" cols="50" rows="5" placeholder="Ejemplo: Es un producto con altos contenidos proteinicos" [(ngModel)]="product.description"></textarea>
+                </p>
+            </div>
+
+        </div>
+        <div class="wky__sell_ask">
+            <p><strong>Fotos</strong></p>
+            <p>Sube una foto de tu producto</p>
+            <label for="file-upload" class="subir">
+                  <i class="fas fa-cloud-upload-alt"></i> Subir imagenes
+                </label>
+            <input id="file-upload" (change)="loadImages($event.target.files)" multiple="true" type="file" style="display: none;">
+            <div id="info"></div>
+
+
+            <div class="wky__sell_photos" *ngFor="let item of uploadImages">
+
+
+                <div>
+                    <img class="img-fluid" [src]="item" alt="">
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="wky__sell_footer">
+        <div class="wky__big_button">
+            <div class="wky__cards_button wky__border_red">
+                <div class="wky__bg_red">
+                    <a href="">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </div>
+                <div class="wky__text_button wky__color_red" (click)="beforeStep()" style="cursor:pointer">
+                    Cancelar
+                </div>
+                <div class="wky__text_button wky__color_blue" (click)="createProduct()" style="cursor:pointer">
+                    Guardar
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

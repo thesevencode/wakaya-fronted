@@ -1,0 +1,96 @@
+.wky__header {
+    height: 50px;
+    width: 100%;
+    background: var(--white_0);
+    box-shadow: 0px 2px 4px var( --gray_3);
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.wky__icon_menu {
+    display: flex;
+    height: 100%;
+}
+
+.wky__icon_menu div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.wky__navbar {
+    display: flex;
+    height: 100%;
+}
+
+.wky__navbar div {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.wky__navbar>div:first-child {
+    flex-direction: row;
+}
+
+.wky__navbar div.wky__nav_search div {
+    border: 1px solid var(--gray_0);
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.wky__navbar div.wky__nav_search div a {
+    color: var(--gray_0) !important;
+}
+
+.wky__navbar div.wky__nav_search div span {
+    border: 0.5px solid var(--gray_0);
+    height: 20px;
+    margin: 0 5px;
+}
+
+.wky__navbar div.wky__nav_search div input {
+    border: 0;
+    margin: 0 10px;
+    outline: 0;
+    color: var(--gray_3);
+    width: 400px;
+}
+
+.wky__navbar div.wky__nav_user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.wky__navbar div.wky__nav_user span {
+    font-size: 15px;
+}
+
+.wky__navbar div a,
+.wky__icon_menu div a {
+    font-size: 20px;
+    color: var(--blue_5);
+}
+
+.wky__navbar div .wky__badge {
+    background: var(--orange_0);
+    box-shadow: 0px 1px 2px var( --gray_3);
+    color: var(--white_0);
+    font-size: 12px;
+    width: 13px;
+    display: inline-block;
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}

@@ -1,0 +1,517 @@
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.css");
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+body {
+    background: url("./assets/img/leaves-pattern.png");
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+
+/* body::-webkit-scrollbar-track { */
+
+
+/* -webkit-box-shadow: inset rgb(0, 0, 0, 0); */
+
+
+/* } */
+
+body::-webkit-scrollbar-thumb {
+    background-color: #ffc244;
+}
+
+
+/* -------------- wakaya text color -------------------- */
+
+.wky-2abb9b {
+    color: #2abb9b;
+}
+
+.wky-5f5f5f {
+    color: #5f5f5f;
+}
+
+.wky-5f5f5fd1 {
+    color: #5f5f5fd1;
+}
+
+.wky-container {
+    width: 1000px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* -------------------------- wakaya cards---------------------------- */
+
+.wky-card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.wky-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* -------------------------- end wakaya cards---------------------------- */
+
+.wky-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wky-box {
+    padding: 1em;
+    width: 100%;
+}
+
+.wky-box-registerlogin {
+    max-width: 300px;
+    margin: auto;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(245, 245, 245);
+    padding: 1em 25px !important;
+    position: relative;
+    margin-top: 70px;
+    box-shadow: 0 2px 2px rgba(218, 215, 210, 0.5);
+}
+
+
+/* -------------------------- wakaya background triangle ---------------------------- */
+
+.wky-box-triangle-left {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    left: 0;
+    border-top: 300px solid #2abb9b;
+    border-right: 1000px solid transparent;
+}
+
+.wky-box-triangle-right {
+    position: absolute;
+    top: 0px;
+    z-index: 0;
+    left: 0;
+    border-top: 350px solid #ffc244;
+    border-left: 1000px solid transparent;
+}
+
+
+/* -------------------------- end wakaya background triangle ---------------------------- */
+
+.wky-form-header {
+    display: flex;
+    list-style: none;
+    border-bottom: 1px solid #f3f3f3;
+    justify-content: space-around;
+}
+
+
+/* .wky-form-header li {
+    /* width: 50%; */
+
+
+/* text-align: center; */
+
+
+/* } */
+
+*/ .wky-form-header li.active {
+    background: #7ef0d742;
+}
+
+.wky-form-header li a {
+    margin: 7px 10px;
+    display: block;
+    /* text-decoration: none; */
+}
+
+.wky-not-link:active,
+.wky-not-link:hover {
+    outline-width: 0;
+}
+
+
+/* -------------------------- wakaya not lint ---------------------------- */
+
+.wky-not-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #2abb9b
+}
+
+
+/* -------------------------- end wakaya not link ---------------------------- */
+
+
+/* -------------------------- wakaya icons ---------------------------- */
+
+.wky-span-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.wky-icon-sm {
+    font-size: 1.3em;
+    width: 40px;
+    height: 40px;
+}
+
+.wky-icon-xsm {
+    font-size: 0.6em;
+    width: 20px;
+    height: 20px;
+}
+
+
+/* -------------------------- end wakaya icons ---------------------------- */
+
+.wky-span-text {
+    margin-left: 5px;
+}
+
+.wky-form-group {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.wky-label-group {
+    display: inline-block;
+    margin-bottom: 0.3rem;
+    font-size: 14px;
+}
+
+.wky-input-group {
+    display: block;
+    width: 100%;
+    line-height: 1;
+    color: #464a4c;
+    padding: 0.5rem 0.75rem;
+    box-sizing: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+}
+
+.wky-select-box {
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    ;
+    height: 30px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+}
+
+.wky-select-box select {
+    background: transparent;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    width: 100%;
+}
+
+.wky-select-box select:focus {
+    outline: none;
+}
+
+.wky-select-box::after {
+    content: "\025be";
+    color: #ffc244;
+    display: table-cell;
+    padding-top: 6px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    pointer-events: none;
+}
+
+.wky-set-inputs-right {
+    padding: 0 0 0 10%;
+}
+
+.wky-input-group-sm {
+    display: block;
+    width: 100%;
+    color: #464a4c;
+    box-sizing: border-box;
+    /* background-color: #ffc24421; */
+    padding: 0.3rem 0.55rem;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.25rem;
+}
+
+input {
+    font-size: 13px !important;
+}
+
+.wky-form-group-in50 {
+    display: flex;
+}
+
+.wky-form-group-in50 p {
+    width: 50%;
+}
+
+.wky-relative {
+    position: relative;
+}
+
+.wky-input-right {
+    position: absolute;
+    right: -10px;
+    top: -5px;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    background: rgb(255, 255, 255);
+    z-index: 9 !important;
+    text-align: center;
+}
+
+.wky-input-right i {
+    border-radius: 50%;
+    border: 1px solid transparent;
+    padding: 6px;
+    line-height: 0.8;
+    color: #ffc244;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+.wky-text-sm {
+    font-size: 13px;
+}
+
+.wky-pos-right {
+    text-align: right !important;
+}
+
+
+/* -------------------------- wakaya radio button ---------------------------- */
+
+.wky-container-radio {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.wky-container-radio input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.wky-checkmark-radio {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+.wky-container-radio:hover input~.wky-checkmark-radio {
+    background-color: #ccc;
+}
+
+.wky-container-radio input:checked~.wky-checkmark-radio {
+    background-color: #2abb9b;
+}
+
+.wky-checkmark-radio:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.wky-container-radio input:checked~.wky-checkmark-radio:after {
+    display: block;
+}
+
+.wky-container-radio .wky-checkmark-radio:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+
+/* -------------------------- end wakaya radio button ---------------------------- */
+
+
+/* -------------------------- wakaya checkebox button ---------------------------- */
+
+.wky-container-checkbox {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.wky-container-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.wky-checkmark-checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+.wky-container-checkbox:hover input~.wky-checkmark-checkbox {
+    background-color: #ccc;
+}
+
+.wky-container-checkbox input:checked~.wky-checkmark-checkbox {
+    background-color: #2abb9b;
+}
+
+.wky-checkmark-checkbox:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.wky-container-checkbox input:checked~.wky-checkmark-checkbox:after {
+    display: block;
+}
+
+.wky-container-checkbox .wky-checkmark-checkbox:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+
+/* -------------------------- end wakaya checkbox button ---------------------------- */
+
+.wky-from-footer {
+    box-sizing: border-box;
+}
+
+.wky-btn {
+    display: block;
+    letter-spacing: .03em;
+    height: 41px;
+    overflow: hidden;
+    padding: 0 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all ease 0.5s;
+    outline: none;
+    color: #5f5f5fd1;
+    text-decoration: none;
+}
+
+.wky-btn-sm {
+    height: 31px;
+    font-size: 12px;
+}
+
+
+/* --------------wakaya widths -------------------- */
+
+.wky-w-100 {
+    width: 100%;
+}
+
+
+/* --------------end wakaya widths -------------------- */
+
+
+/* -------------- wakaya buttons color -------------------- */
+
+.wky-btn-2abb9b {
+    background-color: transparent;
+    border: 1.5px solid #2abb9b;
+}
+
+.wky-btn-2abb9b:hover {
+    background-color: #2abb9b;
+    color: #fff;
+}
+
+.wky-btn-ffc244 {
+    background-color: transparent;
+    border: 1.5px solid #ffc244;
+}
+
+.wky-btn-ffc244:hover {
+    background-color: #ffc244;
+    color: #fff;
+}
+
+
+/* -------------- end wakaya buttons color -------------------- */
+
+
+/* -------------- wakaya backgrounds color -------------------- */
+
+.wky-bg-white {
+    background: #fff;
+}
+
+
+/* --------------end wakaya backgrounds color -------------------- */
+
+
+/* ---------------- wky margin -----------------------------*/
+
+.wky-mt-5 {
+    margin-top: 5px;
+}
+
+
+/* ---------------- end wky margin -----------------------------*/
+
+
+/* ---------------- wky cursor pointer -----------------------------*/
+
+.wky-pointer {
+    cursor: pointer;
+}
+
+
+/* ---------------- end wky cursor pointer -----------------------------*/

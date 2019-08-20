@@ -1,0 +1,231 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("../node_modules/@fortawesome/fontawesome-free/css/all.css");
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+}
+
+#sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+}
+
+#sidebar-wrapper .list-group {
+    width: 15rem;
+}
+
+#page-content-wrapper {
+    min-width: 100vw;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+}
+
+@media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+}
+
+html {
+    --white_0: #ffffff;
+    --white_1: #fdfdfd;
+    --white_2: #fafafa;
+    --black_0: #000000;
+    --gray_0: #cfcfcf;
+    --gray_1: #f7f8fa;
+    --gray_3: #707070;
+    --orange_0: #f4511e;
+    --blue_5: #2e3a4d;
+    --blue_0: #1193e9;
+    --skyblue_0: #88c9f4;
+    --yellow_0: #ffcb2b;
+}
+
+body::-webkit-scrollbar {
+    width: 7px;
+    background-color: rgb(0, 0, 0, 0);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--orange_0);
+}
+
+.wky__container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.wky__pages {
+    background: var(--gray_1);
+}
+
+.wky__content {
+    margin-left: 250px;
+    position: relative;
+}
+
+.wky__sell_card {
+    width: 100%;
+    background: var(--white_0);
+    box-shadow: 0px 2px 4px var(--gray_3);
+    border-radius: 15px;
+    position: relative;
+    margin-top: 20px;
+    border-bottom: 20px solid var(--orange_0);
+}
+
+.wky__sell_card .wky__sell_header {
+    border-bottom: 2px solid var(--pink_0);
+    padding: 5px 20px;
+}
+
+.wky__sell_card .wky__sell_header p {
+    color: var(--blue_3);
+    padding: 3px 0;
+}
+
+.wky__sell_card .wky__sell_header p:first-child {
+    font-size: 20px;
+}
+
+.wky__sell_card .wky__sell_header p:last-child {
+    font-size: 15px;
+}
+
+.wky__sell_body {
+    padding: 5px 20px;
+}
+
+.wky__sell_body .wky__sell_ask {
+    padding: 10px 0;
+}
+
+.wky__sell_body .wky__sell_ask p {
+    color: var(--blue_3);
+    font-size: 14px;
+}
+
+.wky__sell_body .wky__sell_ask p:last-child {
+    margin: 10px 0;
+}
+
+.wky__sell_card .wky__sell_ask p:last-child input[type=text] {
+    padding: 5px 10px;
+    border: none;
+    outline: 0;
+    border-bottom: 1px solid var(--blue_3);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.wky__sell_card .wky__sell_ask p:last-child select {
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid var(--blue_3);
+}
+
+.wky__sell_card .wky__sell_ask .wky__sell_photos {
+    display: inline-block;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.wky__sell_card .wky__sell_ask .wky__sell_photos>div {
+    width: 150px;
+    border: 2px solid var(--gray_0);
+    text-align: center;
+    position: relative;
+}
+
+.wky__sell_card .wky__sell_ask .wky__sell_photos>div:first-child {
+    border: 2px dotted var(--gray_0);
+}
+
+.wky__sell_card .wky__sell_ask .wky__sell_photos>div img {
+    height: 150px;
+}
+
+
+/* BOTONES */
+
+.wky__big_button {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wky__cards_button {
+    display: flex;
+    border: 2px solid var(--blue_0);
+    border-radius: 30px;
+    margin: 0 10px;
+}
+
+.wky__border_blue {
+    border: 2px solid var(--blue_0);
+}
+
+.wky__border_red {
+    border: 2px solid var(--red_5);
+}
+
+.wky__cards_button a {
+    color: var(--white_0);
+    font-size: 20px;
+}
+
+.wky__cards_button div:first-child {
+    padding: 10px;
+    border-radius: 50%;
+    background: none;
+    text-align: center;
+}
+
+.wky__bg_blue {
+    background: var(--blue_0);
+}
+
+.wky__bg_red {
+    background: var(--red_5);
+}
+
+.wky__cards_button div:last-child {
+    position: relative;
+}
+
+.wky__cards_button .wky__text_button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+}
+
+.wky__color_red {
+    color: var(--red_5);
+}
+
+.wky__color_blue {
+    color: var(--blue_0);
+}

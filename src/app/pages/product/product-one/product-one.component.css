@@ -1,0 +1,40 @@
+.wky__sell_body {
+    padding: 5px 20px;
+}
+
+.wky__sell_body .wky__sell_row {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.wky__sell_body .wky__sell_row .wky__sell_category {
+    background-image: url('https://cdn.webshopapp.com/shops/15426/files/5033017/piet-boon-wallpaper-concreto-mirada-concrete1-gris.jpg');
+    background-size: contain;
+    border: 2px solid var(--pink_0);
+    width: 120px;
+    height: 90px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.wky__sell_body .wky__sell_row .wky__sell_category p {
+    font-weight: bolder;
+}
+
+.wky__sell_body .wky__sell_row .wky__sell_category:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.wky__sell_body .wky__sell_row .wky__sell_category p {
+    font-size: 15px;
+    margin: auto;
+}
+
+.wky__sell_footer {
+    padding: 5px 20px;
+}
+
+
+/*--------------------------------------------------*/
