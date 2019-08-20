@@ -25,4 +25,13 @@ export class ProductService {
     const token = localStorage.getItem('token');
     return this.http.post<any>(`${this.url}?token=${token}`, product).toPromise();
   }
+
+  getAll(){
+    return this.http.get(URL + '/product').toPromise();
+  }
+
+  getByCategories(categories){
+    return this.http.post(URL + '/product/by_categories', { categories }).toPromise();
+  }
+
 }
