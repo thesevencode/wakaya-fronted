@@ -1,0 +1,365 @@
+.wky__body {
+    /*    background: var(--blue_5);*/
+        height: 650px;
+        width: 100%;
+        position: relative;
+    
+    }
+    
+    
+    .wky__home_title {
+        padding: 40px 0;
+        font-size: 30px;
+        text-align: center;
+        color: var(--blue_5);
+    }
+    
+    
+    /*---------------------------------------*/
+    .wky__ofrecemos {
+        background: var(--skygreen_0);
+            padding-bottom: 50px;
+    
+    }
+    .wky__ofrecemos .wky__categorias {
+        display: flex;
+    }
+    .wky__cate_top, .wky__cate_bottom {
+        display: flex;
+        justify-content: space-between;
+    }    
+    .wky__cate_right {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+    }
+    .wky__ofrecemos .wky__cate {
+        position: relative;
+        margin: 10px;
+    }
+    .wky__ofrecemos .wky__cate span {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        font-size: 20px;
+        font-weight: bold;
+        color: var(--white_0);
+    }
+    .wky__ofrecemos .cate__tall {
+        width: 350px;
+        height: 550px;
+    }
+    .wky__ofrecemos .cate__large {
+        width: 450px;
+        height: 250px;
+    }
+    .wky__ofrecemos .cate__small {
+        width: 350px;
+        height: 250px;
+    }
+    .wky__ofrecemos .cate__tall_small {
+         width: 250px;
+        height: 250px;
+    }
+    .wky__ofrecemos .wky__cate img {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+    }
+    
+    
+    
+    
+    /*--------------------------------*/
+    .wky__nosotros {
+        background: var(--white_0);
+            padding-bottom: 50px;
+    
+    }
+    .wky__WaKaYa strong {
+        font-size: 20px;
+        color: var(--blue_5);
+    }
+    .wky__WaKaYa .wky__que {
+        text-align: center;
+    }
+    .wky__WaKaYa .wky__que > div {
+        width: 350px;
+        margin: auto;
+    }
+    .wky__WaKaYa .wky__porque, .wky__WaKaYa .wky__quien {
+        display: flex;
+        justify-content: space-between;
+    }
+    .wky__WaKaYa .wky__descripcion {
+        width: 500px;
+    }
+    .wky__WaKaYa .wky__descripcion p {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+    
+    /*-----------------------------------------------*/
+    
+    
+    .wky__servicios {
+        background: var(--skygreen_0);
+            padding-bottom: 50px;
+    
+    }
+    .wky__servicios .wky__tresservicios {
+        display: flex;
+        justify-content: space-between;
+    }
+    .wky__servicios .wky__tresservicios .wky__service {
+        width: 300px;
+        padding: 5px 20px;
+        background: var(--white_0);
+        border-radius: 15px;
+    }
+    .wky__servicios .wky__tresservicios .wky__service img {
+        width: 100%;
+    }
+    .wky__servicios .wky__tresservicios .wky__service p {
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .lista {
+        counter-reset: li; 
+        list-style: none; 
+        *list-style: decimal; 
+        font: 15px 'trebuchet MS', 'lucida sans';
+        padding: 0;
+        margin-bottom: 4em;
+        text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    }
+    .lista ol {
+        margin: 0 0 0 2em; 
+    }
+    .lista li{
+        position: relative;
+        display: block;
+        padding: .4em .4em .4em .8em;
+        *padding: .4em;
+        margin: .5em 0 .5em 2.5em;
+                        
+        color: #444;
+        text-decoration: none;
+        transition: all .3s ease-out;   
+    }
+    .lista li:hover{
+        background: #eee;
+    }   
+    .lista li:before{
+        content: counter(li);
+        counter-increment: li;
+        position: absolute; 
+        left: -2.5em;
+        top: 50%;
+        margin-top: -1em;
+        background: var(--skyblue_0);
+        height: 2em;
+        width: 2em;
+        line-height: 2em;
+        text-align: center;
+        font-weight: bold;
+    }
+    .lista li:after{
+        position: absolute; 
+        content: '';
+        border: .5em solid transparent;
+        left: -1em;
+        top: 50%;
+        margin-top: -.5em;
+        transition: all .3s ease-out;               
+    }
+    .lista li:hover:after{
+        left: -.5em;
+        border-left-color: var(--skyblue_0);             
+    }
+    /*----------------------------------------------------------*/
+    
+    .wky__juntos {
+        background: var(--white_0);
+            padding-bottom: 50px;
+    
+    }
+    .wky__tresjuntos {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 100px;
+    }
+    .wky__tresjuntos .wky__infouser {
+        width: 250px;
+        border-radius: 15px;
+        border: 2px solid var(--skygreen_0);
+        padding: 120px 20px 15px;
+        position: relative;
+        
+    }
+    .wky__tresjuntos .wky__infouser img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        position: absolute;
+        top: -100px;
+        right: 45px;
+        box-shadow: 0px 2px 4px var(--gray_3);
+    }
+    .wky__tresjuntos .wky__infouser p {
+        text-align: center;
+        padding: 5px;
+        font-weight: bold;
+    }
+    .wky__tresjuntos .wky__infouser div {
+        font-size: 15px;
+    }
+    /*------------------------------------*/
+    
+    .wky__organizations {
+        background: var(--skygreen_0);
+        padding-bottom: 50px;
+    }
+    .wky__organizations .wky__diezorganizations {
+        background: var(--white_0);
+        padding: 10px 100px;
+    }
+    .wky__organizations .wky__organization {
+        border: 1px solid var(--pink_0);
+        width: 150px;
+        height: 200px;
+        margin: 10px;
+        display: flex;
+        align-items: flex-end;
+    
+    }
+    .wky__organizations .wky__organization p {
+        margin: auto;
+        font-size: 14px;
+    }
+    
+    
+    /*-------------------------------*/
+    .wky__footer {
+        height: 400px;
+        background: var(--skygreen_3); 
+    }
+    .wky__darkfooter {
+        background: var(--darkgreen_3);
+            height: 50px;
+    }
+    
+    
+    
+
+
+    
+/*--------------RESPONSIVE-------------------------*/
+@media only screen and (max-width: 768px) { /* For tablets: */ 
+    .wky__ofrecemos .wky__categorias {
+        display: block;
+    }
+    .wky__ofrecemos .wky__cate {
+        position: relative;
+        margin: 10px;
+    }
+    .wky__ofrecemos .cate__tall {
+        width: 300px;
+        height: 500px;
+        margin: auto;
+    }
+    .wky__ofrecemos .cate__large {
+        width: 400px;
+        height: 200px;
+    }
+    .wky__ofrecemos .cate__small {
+        width: 300px;
+        height: 200px;
+    }
+    .wky__ofrecemos .cate__tall_small {
+         width: 200px;
+        height: 200px;
+    }
+    .wky__cate_top {
+        margin: auto;
+    }
+    .wky__cate_bottom {
+        margin: auto;
+    }
+    
+    .wky__WaKaYa .wky__porque img, .wky__quien img {
+        width: 300px;
+    }
+    .wky__WaKaYa .wky__descripcion {
+        font-size: 15px;
+    }
+
+
+    .wky__servicios .wky__tresservicios .wky__service {
+        width: 200px;
+        padding: 5px 10px;
+    }
+    .wky__servicios .wky__tresservicios .wky__service p {
+        text-align: center;
+        padding: 0 5px;
+    }
+   
+    .lista li{
+        font-size: 13px;
+    }
+    .lista li:before{
+        font-size: 13px;
+    }
+    
+    
+    .wky__tresjuntos .wky__infouser {
+        width: 200px;
+        padding: 80px 20px 15px;
+    }
+    .wky__tresjuntos .wky__infouser img {
+        width: 150px;
+        height: 150px;
+        top: -70px;
+        right: 40px;
+    }
+    .wky__tresjuntos .wky__infouser div {
+        font-size: 14px;
+    }
+    
+    .wky__organizations .wky__diezorganizations {
+        background: var(--white_0);
+        padding: 10px;
+    }
+    .wky__organizations .wky__organization {
+        width: 100px;
+        height: 150px;
+        margin: 5px;
+        align-items: center;
+
+    }
+    .wky__organizations .wky__organization p {
+        font-size: 13px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -9,12 +9,14 @@ import { SharedModule } from '../shared/shared.module';
 
 import { ProductOneComponent } from './product/product-one/product-one.component';
 import { ProductTwoComponent } from './product/product-two/product-two.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 @NgModule({
   declarations: [
     ProductOneComponent,
-    ProductTwoComponent
+    ProductTwoComponent,
+    ProfileComponent
   ],
   imports: [
     CommonModule,

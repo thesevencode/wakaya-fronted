@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 import { URL } from '../config/config';
+import Swal from 'sweetalert2';
 
 
 @Injectable({
@@ -35,6 +36,8 @@ export class ProductService {
       .then(res => {
         this.http.post(URL + '/image/product/' + res.item._id, formData).toPromise()
           .then(resp => {
+            Swal.fire('Producto creado', ':")', 'success');
+
             return resp;
           });
       });

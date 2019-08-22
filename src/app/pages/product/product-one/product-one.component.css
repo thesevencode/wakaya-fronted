@@ -1,33 +1,113 @@
+.wky__content {
+    margin-left: 250px;
+    position: relative;
+    display: flex;
+
+}
+
+.wky__steps {
+    width: 250px;
+    height: 500px;
+    position: relative;
+    top: -40px;
+    list-style: none;
+}
+
+.wky__steps li.wky__past div {
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    border-radius: 50%;
+    background: var(--orange_0);
+    box-shadow: 0px 2px 4px var(--gray_);
+    display: flex;
+    box-shadow: 0px 4px 7px var(--gray_3);
+}
+.wky__steps li.wky__past div a {
+    color: var(--white_0);
+    text-decoration: none;
+    font-weight: bold;
+    margin: auto;
+}
+.wky__steps li div {
+    padding: 20px;
+    width: 30px;
+    height: 30px;
+    margin: auto;
+    border-radius: 50%;
+    background: var(--white_0);
+    border: 2px solid var(--orange_0);
+    display: flex;
+    box-shadow: 0px 4px 7px var(--gray_3);
+}
+.wky__steps li div a {
+    color: var(--orange_0);
+    text-decoration: none;
+    font-weight: bold;
+        margin: auto;
+
+}
+.wky__steps li:after {
+    content: '';
+    border: 1px solid var(--pink_0);
+    position: relative;
+    left: 50%;
+    top: 1px;
+}
+.wky__steps li:last-child:after {
+    content: '';
+    border: none;
+}
+
+
+
+.wky__sell_card {
+    width: 750px;
+    background: var(--white_0);
+    box-shadow: 0px 2px 4px var(--gray_3);
+    border-radius: 15px;
+    position: relative;
+    top: -80px;
+    border-bottom: 20px solid var(--orange_0);
+}
+.wky__sell_card .wky__sell_header {
+    border-bottom: 2px solid var(--pink_0);
+    padding: 5px 20px;
+}
+.wky__sell_card .wky__sell_header p {
+    color: var(--blue_3);
+    padding: 3px 0;
+}
+.wky__sell_card .wky__sell_header p:first-child {
+    font-size: 20px;
+}
+.wky__sell_card .wky__sell_header p:last-child {
+    font-size: 15px;
+}
+
+
 .wky__sell_body {
     padding: 5px 20px;
 }
-
-.wky__sell_body .wky__sell_row {
+.wky__sell_body  .wky__sell_row {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     margin: 20px 0;
 }
-
-.wky__sell_body .wky__sell_row .wky__sell_category {
-    background-image: url('https://cdn.webshopapp.com/shops/15426/files/5033017/piet-boon-wallpaper-concreto-mirada-concrete1-gris.jpg');
-    background-size: contain;
+.wky__sell_body  .wky__sell_row .wky__sell_category {
     border: 2px solid var(--pink_0);
     width: 120px;
-    height: 90px;
+    height: 180px;
     display: flex;
-    align-items: flex-start;
+    align-items: flex-end;
 }
-
-.wky__sell_body .wky__sell_row .wky__sell_category p {
-    font-weight: bolder;
-}
-
-.wky__sell_body .wky__sell_row .wky__sell_category:hover {
+.wky__sell_body  .wky__sell_row .wky__sell_category:hover {
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0,0,0,0.1);
 }
-
-.wky__sell_body .wky__sell_row .wky__sell_category p {
+.wky__sell_body  .wky__sell_row .wky__sell_category p {
     font-size: 15px;
     margin: auto;
 }
@@ -36,5 +116,124 @@
     padding: 5px 20px;
 }
 
+.wky__big_button {
+    display: flex;
+    justify-content: flex-end;
+}
+.wky__cards_button {
+    display: flex;
+/*    border: 2px solid var(--blue_0);*/
+    border-radius: 30px;
+    margin: 0 10px;
 
-/*--------------------------------------------------*/
+}
+.wky__border_blue {
+    border: 2px solid var(--blue_0);
+}
+.wky__border_red {
+    border: 2px solid var(--red_5);
+}
+.wky__cards_button a {
+    color: var(--white_0);
+    font-size: 20px;
+}
+.wky__cards_button div:first-child {
+    padding: 10px;
+    width: 25px;
+    border-radius: 50%;
+/*    background: var(--blue_0);*/
+    box-shadow: 0px 2px 4px var(--gray_3);
+    text-align: center;
+}
+.wky__bg_blue {
+    background: var(--blue_0);
+}
+.wky__bg_red {
+    background: var(--red_5);
+}
+.wky__cards_button div:last-child {
+    position: relative;
+}
+.wky__cards_button .wky__text_button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+}
+.wky__color_red {
+    color: var(--red_5);
+}
+.wky__color_blue {
+    color: var(--blue_0);
+}
+
+
+
+
+
+/*--------------RESPONSIVE-------------------------*/
+
+
+@media only screen and (max-width: 768px)  {
+
+    
+    .wky__content {
+        margin-left: 50px;
+        
+        /*-----------------*/
+        display: block;
+    }
+    
+    /*-----------------------------------------------------------------------*/
+
+    .wky__steps {
+        width: 100%;
+        height: auto;
+        top: -100px;
+        text-align: center;
+    }
+    .wky__steps li  {
+        display: inline-block;
+        margin: 0 20px;
+    }
+    .wky__steps li:after {
+        border: none;
+    }
+    
+    .wky__sell_card {
+        width: 95%;
+        margin: auto;
+    }
+    .wky__sell_body  .wky__sell_row .wky__sell_category {
+        width: 90px;
+        height: 130px;
+    }
+    .wky__sell_body  .wky__sell_row .wky__sell_category p {
+        font-size: 13px;
+    }
+    
+    
+    
+    
+
+}
+
+@media only screen and (max-width: 576px) {
+
+    /*-----------------------------------------*/
+    
+    .wky__sell_card {
+        width: 80%;
+    }
+    .wky__sell_body .wky__sell_row {
+        display: block;
+    }
+    .wky__sell_body  .wky__sell_row .wky__sell_category {
+        width: auto;
+        height: 150px;
+    }
+    
+    
+    
+    
+}
+

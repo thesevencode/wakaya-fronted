@@ -1,4 +1,4 @@
-<div class="container wky__sell_card">
+<!-- <div class="container wky__sell_card">
     <div class="wky__sell_header">
         <p>
             <strong>¡Hola!</strong>
@@ -32,6 +32,133 @@
             <div class="wky__cards_button">
                 <div class="wky__color_blue" (click)="nextStep()" style="cursor:pointer">
                     Continuar
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+<div class="wky__content">
+    <ul class="wky__steps">
+       <li class="wky__past">
+           <div>
+               <a href="">
+                  
+                   1
+               </a>
+           </div>
+       </li>
+       <li>
+           <div>
+               <a href="">
+                   2
+               </a>
+           </div>
+       </li>
+       <!-- <li>
+           <div>
+               <a href="">
+                   3
+               </a>
+           </div>
+       </li> -->
+       
+   </ul>
+    <div class="wky__sell_card">
+        <div class="wky__sell_header">
+            <p>
+                <strong>¡Hola!</strong>
+            </p>
+            <p>
+                ¿Qué vas a publicar?
+            </p>
+        </div>
+        <div class="wky__sell_body">
+            <div class="wky__sell_row">
+                <div class="wky__sell_category" *ngFor="let b of allCategories" (click)="selectCategorie(b.description)">
+                    <p>
+                        {{b.description}}
+                    </p>
+                </div>
+                
+                <!-- <div class="wky__sell_category">
+                    <p>
+                        Categoria 2
+                    </p>
+                </div>
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 3
+                    </p>
+                </div>
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 4
+                    </p>
+                </div>
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 5
+                    </p>
+                </div> -->
+            </div>
+             <!-- <div class="wky__sell_row">
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 6
+                    </p>
+                </div>
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 7
+                    </p>
+                </div>
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 8
+                    </p>
+                </div>
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 9
+                    </p>
+                </div>
+                <div class="wky__sell_category">
+                    <p>
+                        Categoria 10
+                    </p>
+                </div>
+            </div> -->
+        </div>
+        <div class="wky__sell_body">
+            <p>Categorias seleccionadas</p>
+            <div class="wky__sell_row">
+                <button type="button" class="btn btn-outline-warning" *ngFor="let item of selectedCategories" disabled>{{item}}</button>
+    
+            </div>
+        </div>
+        <div class="wky__sell_footer">
+            <div class="wky__big_button">
+                <div class="wky__cards_button wky__border_red">
+                   <div class="wky__bg_red">
+                       <a>
+                           <i class="fas fa-times"></i>
+                       </a>
+                   </div>
+                   <div class="wky__text_button wky__color_red">
+                       Cancelar
+                   </div>
+                </div>
+                <div class="wky__cards_button wky__border_blue " (click)="nextStep()">
+                   <div class="wky__bg_blue">
+                       <a>
+                           <i class="fas fa-check"></i>
+                       </a>
+                   </div>
+                   <div class="wky__text_button wky__color_blue">
+                       Continuar
+                   </div>
                 </div>
             </div>
         </div>

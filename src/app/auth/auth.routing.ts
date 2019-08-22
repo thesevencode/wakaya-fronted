@@ -6,6 +6,7 @@ import { AuthComponent } from './auth.component';
 
 import { ProductDetailComponent } from '../client/product/product-detail/product-detail.component';
 import { ProductListComponent } from '../client/product/product-list/product-list.component';
+import { HomeComponent } from './home/home.component';
 
 
 export const AuthRoutes: Routes = [
@@ -13,6 +14,10 @@ export const AuthRoutes: Routes = [
     path: '',
     component: AuthComponent,
     children: [
+      {
+        path: 'inicio',
+        component: HomeComponent
+      },
       {
         path: 'productos',
         component: ProductListComponent

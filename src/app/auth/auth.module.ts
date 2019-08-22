@@ -15,6 +15,7 @@ import { ErrorsComponent } from '../components/errors/errors.component';
 
 
 import { ClientModule } from '../client/client.module';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ClientModule } from '../client/client.module';
     AuthComponent,
     LoginComponent,
     RegisterComponent,
-    ErrorsComponent
+    ErrorsComponent,
+    HomeComponent
   ],
   imports: [
     CommonModule,

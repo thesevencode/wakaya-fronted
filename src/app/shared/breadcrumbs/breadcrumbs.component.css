@@ -4,7 +4,7 @@
     height: 30px;
     display: flex;
     align-items: center;
-    padding: 5px 10px;
+    padding: 5px 0px;
 }
 .wky__breadcrumbs ul li {
     list-style: none;
@@ -40,18 +40,22 @@
 .wky__breadcrumbs_blue div:first-child span:first-child {
     font-size: 45px;
 }
-.wky__breadcrumbs_blue > div:last-child {
-    display: flex;
-    justify-content: flex-end;
-/*    border: 1px solid black;*/
+.wky__space {
+    height: 100px;
 }
-.wky__breadcrumbs_blue .wky__pagination {
-    border: 1px solid var(--skyblue_0);
-    width: 700px;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-}
-.wky__breadcrumbs_blue .wky__pagination a {
-    background: white;
+
+
+
+/*--------------RESPONSIVE-------------------------*/
+
+
+@media only screen and (max-width: 768px)  {
+
+    
+    .wky__breadcrumbs {
+        margin-left: 50px;
+    }
+    .wky__breadcrumbs_blue {
+        margin-left: 50px;
+    }
 }

@@ -1,28 +1,37 @@
+.wky__content {
+  margin-left: 250px;
+  position: relative;
+
+}
+
 .wky__card_left {
   background: var(--white_0);
-  margin: 0px 20px;
+  width: 230px;
+  height: 500px;
+  margin: 0 20px;
   border-radius: 15px;
   box-shadow: 0px 2px 4px var(--gray_3);
   border-bottom: 15px solid var(--orange_0);
-  height: 600px;
+  position: absolute;
+  /* top: -50px; */
 }
 .wky__cards_right {
-  padding-left: 50px;
-  padding-right: 50px;
+  margin-left: 300px;
 }
 .wky__row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 20px;
 }
 .wky__cards_right .wky__card {
-  margin: 5px 0px;
   width: 200px;
   height: 350px;
   background: var(--white_0);
-  box-shadow: 0px 2px 4px var(--gray_0);
+  box-shadow: 0px 2px 4px var(--gray_0); 
   border-radius: 10px;
   border-bottom: 10px solid var(--orange_0);
+  margin: 0 20px;
 }
 .wky__cards_right .wky__card .wky__card_body {
   text-align: center;
@@ -47,19 +56,19 @@
   font-size: 14px;
   padding: 2px;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 5px;   
   position: relative;
   box-shadow: 0px 1px 2px var(--gray_0);
 }
 .wky__card_body ul li:first-child:after {
   content: '';
   border: 5px solid transparent;
-  border-left-color: var(--orange_0);
-  border-top-color: var(--orange_0);
+  border-left-color: var(--orange_0); 
+  border-top-color: var(--orange_0); 
   position: absolute;
   bottom: -6px;
   right: 0;
-  transition: all .3s ease-out;
+  transition: all .3s ease-out; 
 }
 /*
 .wky__card_body ul li:nth-child(2){
@@ -68,19 +77,19 @@
   font-size: 14px;
   padding: 2px;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 5px;   
   position: relative;
   box-shadow: 0px 1px 2px var(--gray_0);
 }
 .wky__card_body ul li:nth-child(2):after {
   content: '';
   border: 5px solid transparent;
-  border-left-color: var(--orange_0);
-  border-top-color: var(--orange_0);
+  border-left-color: var(--orange_0); 
+  border-top-color: var(--orange_0); 
   position: absolute;
   bottom: -6px;
   right: 0;
-  transition: all .3s ease-out;
+  transition: all .3s ease-out; 
 }
 */
 .wky__card_body ul li:last-child{
@@ -89,19 +98,19 @@
   font-size: 14px;
   padding: 2px;
   margin-top: 10px;
-  border-radius: 5px;
+  border-radius: 5px;   
   position: relative;
   box-shadow: 0px 1px 2px var(--gray_0);
 }
 .wky__card_body ul li:last-child:after {
   content: '';
   border: 5px solid transparent;
-  border-left-color: var(--yellow_0);
-  border-top-color: var(--yellow_0);
+  border-left-color: var(--yellow_0); 
+  border-top-color: var(--yellow_0); 
   position: absolute;
   bottom: -6px;
   right: 0;
-  transition: all .3s ease-out;
+  transition: all .3s ease-out; 
 }
 
 .wky__card__footer {
@@ -143,7 +152,7 @@
 }
 .wky__card_buttons {
   position: absolute;
-  top: 0;
+  top: 0; 
   right: 5px;
 }
 .wky__card_buttons div {
@@ -167,6 +176,59 @@
 .wky__card_buttons a {
   color: var(--white_0);
 }
+
+
+
+
+
+
+
+/*--------------RESPONSIVE-------------------------*/
+
+
+@media only screen and (max-width: 768px)  {
+
+  .wky__content {
+      margin-left: 50px;
+  }
+  .wky__card_left {
+      display: none;
+  }
+  .wky__cards_right {
+      margin-left: 0px;
+  }
+
+  
+
+}
+
+@media only screen and (max-width: 576px) {
+  
+  /*-----------------------------------------*/
+  
+  
+  .wky__row {
+      display: block;
+
+  }
+  .wky__cards_right .wky__card {
+      width: 300px;
+      margin: auto;
+      margin-bottom: 20px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .funkyradio div {
@@ -276,4 +338,85 @@
 .funkyradio-info input[type="checkbox"]:checked ~ label:before {
   color: #fff;
   background-color: #5bc0de;
+}
+
+
+
+
+/*-----------------------*/
+.wky__card_left > div {
+  position: relative;
+  padding: 3px 10px;
+}
+.wky__container_checkbox {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  user-select: none;
+  color: var(--blue_5);
+  font-size: 14px;
+}
+
+.wky__container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  top: 5px;
+    left: 5px;
+    z-index: 1;
+}
+
+/* Create a custom checkbox */
+.wky__checkcheckbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.wky__container_checkbox:hover input ~ .wky__checkcheckbox {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.wky__container_checkbox input:checked ~ .wky__checkcheckbox {
+  background-color: var(--orange_0);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.wky__checkcheckbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.wky__container_checkbox input:checked ~ .wky__checkcheckbox:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.wky__container_checkbox .wky__checkcheckbox:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.wky__form aside {
+    margin-top: 20px;
+}
+.wky__form aside a{
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    justify-content: flex-end;
+    
 }

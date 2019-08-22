@@ -1,4 +1,4 @@
-<div class="wky__sell_card">
+<!-- <div class="wky__sell_card">
     <div class="wky__sell_header">
         <p>
             <strong>¡Empecemos!</strong>
@@ -77,4 +77,198 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<div class="wky__content">
+    <ul class="wky__steps">
+        <li class="wky__past">
+            <div>
+                <a href="">
+                   
+                    1
+                </a>
+            </div>
+        </li>
+        <li class="wky__past">
+            <div>
+                <a href="">
+                    2
+                </a>
+            </div>
+        </li>
+        
+    </ul>
+    <div class="wky__sell_card">
+         <div class="wky__sell_header">
+             <p>
+                 <strong>¡Empecemos!</strong>
+             </p>
+             <p>
+                 Describe todo tu producto
+             </p>
+         </div>
+         <div class="wky__sell_body">
+             <div class="wky__sell_ask">
+                 <p><strong>Escribe el título para tu publicación</strong></p>
+                 <p>Escribe un titulo para tu publicación asi ofreceremos sus respectivas opciones </p>
+                 <p>
+                     <input type="text" placeholder="Ejem: miel de abeja de la antartida"  [(ngModel)]="product.name">
+                 </p>
+             </div>
+             <div class="wky__sell_ask">
+                <p><strong>Cantidad</strong></p>
+                <p>¿Con cuantos productos del mismo tipo cuenta en su stock?</p>
+                <p>
+                    <select name="" id="" [(ngModel)]="product.stock">
+                        <option [ngValue]="">1</option>
+                        <option [ngValue]="">2</option>
+                        <option [ngValue]="">3</option>
+                        <option [ngValue]="">4</option>
+                        <option [ngValue]="">5</option>
+                        <option [ngValue]="">6</option>
+                        <option [ngValue]="">7</option>
+                        <option [ngValue]="">8</option>
+                        <option [ngValue]="">9</option>
+                        <option [ngValue]="">10</option>
+                        <option [ngValue]="">11</option>
+                        <option [ngValue]="">12</option>
+                        <option [ngValue]="">13</option>
+                        <option [ngValue]="">14</option>
+                    </select>
+                </p>
+            </div>
+            <div class="wky__sell_ask">
+                <p><strong>Asigne un precio</strong></p>
+                <p>Escriba el precio por el cual venderá su producto </p>
+                <p>
+                    <input type="text" placeholder="Ejmplo: 35.50" [(ngModel)]="product.price">
+                </p>
+            </div>
+            <div class="wky__sell_ask">
+                <p><strong>Agregar una descripción</strong> | Opcional</p>
+                <p></p>
+                <p>
+                    <textarea name="" id="" rows="5" [(ngModel)]="product.description"></textarea>
+                </p>
+            </div>
+             <!-- <div class="wky__sell_ask">
+                 <p><strong>Elije la subcategoría</strong></p>
+                 <p>Navega la lista de categorías y elije una. </p>
+                 <p>
+                     <span>Inicio</span>
+                     <span><i class="fas fa-chevron-right"></i></span>
+                     <span>Apicultura</span>
+                     <span><i class="fas fa-chevron-right"></i></span>
+                     <span>
+                         <select name="" id="">
+                             <option value=""> subcategoria 1</option>
+                             <option value=""> subcategoria 2</option>
+                             <option value=""> subcategoria 3</option>
+                             <option value=""> subcategoria 4</option>
+                             <option value=""> subcategoria 5</option>
+                             <option value=""> subcategoria 6</option>
+                             <option value=""> subcategoria 7</option>
+                             <option value=""> subcategoria 8</option>
+                             <option value=""> subcategoria 9</option>
+                             <option value=""> subcategoria 10</option>
+                         </select>
+                     </span>
+                 </p>
+             </div>
+             <div class="wky__sell_ask">
+                 <p><strong>Condicion del producto</strong></p>
+                 <p>¿En que condiciones se encuentra el producto que ofrece?</p>
+                 <p>
+                     <label class="wky__container_radio">Usado
+                         <input type="radio" checked="checked" name="radio">
+                         <span class="wky__checkradio"></span>
+                     </label>
+                     <label class="wky__container_radio">Nuevo
+                         <input type="radio" checked="checked" name="radio">
+                         <span class="wky__checkradio"></span>
+                     </label>
+                 </p>
+             </div> -->
+             <div class="wky__sell_ask">
+                 <p><strong>Fotos</strong></p>
+                 <p>Sube una o mas fotos de tu producto, puedes elegir la foto de tu portada</p>
+                 <p>
+                         
+                 </p>
+                 <div class="wky__sell_photos">
+                     <div>
+                         <!-- <div class="wky__card_button">
+                            <div><a href=""><i class="fas fa-camera"></i></a></div>
+                            <div>
+                                <span>Agregar foto</span>
+                            </div>
+                         </div> -->
+                         <input id="file-upload" (change)="loadImages($event.target.files)" multiple="true" type="file">
+                        <div id="info"></div>
+                     </div>
+                     <div *ngFor="let item of uploadImages">
+                         <div class="">
+                            <div><img [src]="item" alt=""></div>
+                            <div class="wky__times"><a href=""><i class="fas fa-times"></i></a></div>
+                         </div>
+                     </div>
+                     <!-- <div>
+                         <div class="">
+                            <div><img src="img/descarga.jpg" alt=""></div>
+                            <div class="wky__times"><a href=""><i class="fas fa-times"></i></a></div>
+                         </div>
+                     </div>
+                     <div>
+                         <div class="">
+                            <div><img src="img/descarga.jpg" alt=""></div>
+                            <div class="wky__times"><a href=""><i class="fas fa-times"></i></a></div>
+                         </div>
+                     </div>
+                      <div>
+                         <div class="">
+                            <div><img src="img/descarga.jpg" alt=""></div>
+                            <div class="wky__times"><a href=""><i class="fas fa-times"></i></a></div>
+                         </div>
+                     </div> -->
+                 </div>
+             </div>
+             <!-- <div class="wky__sell_ask">
+                 <p><strong>Cantidad</strong></p>
+                 <p>¿Con cuantos productos del mismo tipo cuenta?</p>
+                 <p>
+                     <select name="" id="">
+                         <option value="">1</option>
+                         <option value="">2</option>
+                         <option value="">3</option>
+                         <option value="">4</option>
+                         <option value="">5</option>
+                     </select>
+                 </p>
+             </div> -->
+         </div>
+         <div class="wky__sell_footer">
+             <div class="wky__big_button">
+                 <div class="wky__cards_button wky__border_red" (click)="beforeStep()">
+                    <div class="wky__bg_red">
+                        <a >
+                            <i class="fas fa-times"></i>
+                        </a>
+                    </div>
+                    <div class="wky__text_button wky__color_red">
+                        Cancelar
+                    </div>
+                 </div>
+                 <div class="wky__cards_button wky__border_blue" (click)="createProduct()">
+                    <div class="wky__bg_blue">
+                        <a>
+                            <i class="fas fa-check"></i>
+                        </a>
+                    </div>
+                    <div class="wky__text_button wky__color_blue">
+                        Continuar
+                    </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>

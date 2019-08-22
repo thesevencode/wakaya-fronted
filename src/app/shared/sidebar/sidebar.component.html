@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<div class="border-right wky__sidebar collapse" id="sidebar-wrapper" aria-labelledby="menu-toggle">
+<!-- <div class="border-right wky__sidebar collapse" id="sidebar-wrapper" aria-labelledby="menu-toggle">
     <div class="sidebar-heading wky__logo_name">
         <img src="../../../assets/img/logo-light-icon.png" alt=" ">
         <span>WaKaYa</span>
@@ -27,5 +27,58 @@
             </li>
         </ul>
     </div>
-</div>
+</div> -->
 <!-- /#sidebar-wrapper -->
+
+
+
+<aside class="wky__sidebar">
+    <div class="wky__logo_name">
+        <!-- <img src="../../../assets/img/logo-light-icon.png" alt=""> -->
+        <a class="wky__logo_name"><i class="fa fa-won-sign"></i></a>      
+        <span>WaKaYa</span>
+    </div>
+    <div class="wky__user">
+        <a routerLink = "/pages/profile"><img src="../../../assets/img/3.jpg" alt=""></a>
+        <span>Ciro Yupanqui</span>  
+        <span><i class="fas fa-chevron-right"></i></span>
+    </div>
+    <ul class="wky__menu">
+        <li>
+            <a [routerLink]="['/routePath']">
+                <span class="icon"><i class="fab fa-adn"></i></span>
+                <span>Dashboard</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span><i class="fab fa-adn"></i></span>
+                <span>Historial</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span><i class="fab fa-adn"></i></span>
+                <span>Organizaciones oficiales</span>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <span><i class="fab fa-adn"></i></span>
+                <span>Ofertas de la semana</span>
+            </a>
+        </li>
+        <li>
+            <a [routerLink]="['/pages/product-one']">
+                <span><i class="fab fa-adn"></i></span>
+                <span>Vender</span>
+            </a>
+        </li>
+        <li>
+            <a href="" (click)="logout() ">
+                <span><i class="fab fa-adn"></i></span>
+                <span>Cerrar Sesiòn</span>
+            </a>
+        </li>
+    </ul>
+</aside>

@@ -4,8 +4,10 @@
             <div class="wky__logo_name">
                 <a href=""><i class="fa fa-won-sign"></i></a>
                 <span>WaKaYa</span>
+                <a (click)="showMenu = !showMenu"><span><i class="fas fa-bars"></i></span></a>
             </div>
-            <ul class="wky__navbar_nav">
+            <!-- <ul class="wky__navbar_nav wky__show_menu"> -->
+            <ul class="wky__navbar_nav" [ngClass]="{'wky__show_menu': showMenu}">
                 <li routerLinkActive="wky__active"><a routerLink="/home/inicio">Home</a></li>
                 <li><a href="#">Servicios</a></li>
                 <li routerLinkActive="wky__active"><a [routerLink]="['/home/productos']">Productos</a></li>
@@ -27,8 +29,10 @@
                     </ul>
                 </li>
                 <!-- class="wky__active" -->
-                <li routerLinkActive="wky__active"><a [routerLink]="['/auth/register']" class="wky__bold">Registrar</a></li>
-                <li routerLinkActive="wky__active"><a [routerLink]="['/auth/login']" class="wky__bold">Acceder</a></li>
+                <!-- <li routerLinkActive="wky__active"><a [routerLink]="['/auth/register']" class="wky__bold">Registrar</a></li> -->
+                <li routerLinkActive="wky__active"><a routerLink="/home/register" class="wky__bold">Registrar</a></li>
+
+                <li routerLinkActive="wky__active"><a routerLink="/home/login" class="wky__bold">Acceder</a></li>
             </ul>
         </div>
     </div>
