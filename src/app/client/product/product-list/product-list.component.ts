@@ -58,6 +58,8 @@ export class ProductListComponent implements OnInit {
     this.productService.getAll()
       .then(res => {
         this.productos = res['item'];
+
+        console.log("los productos ...",this.productos);
       });
   }
   getProductsByCategories(){

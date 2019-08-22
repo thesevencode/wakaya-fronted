@@ -17,7 +17,8 @@ export class ProductDetailComponent implements OnInit {
   products = [];
   limit ;
   compra = 0;
-  total;
+  total = 0;
+  showPayPal = false;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -35,6 +36,9 @@ export class ProductDetailComponent implements OnInit {
     
     if (this.userService._isLogged() == true){
       console.log("compraremos algo ");
+      this.total = this.compra * this.product.price;
+      console.log("lo qe vamos a gastar",this.total);
+      this.showPayPal = true;
     }else{
       let data = {
         _id : this.id,

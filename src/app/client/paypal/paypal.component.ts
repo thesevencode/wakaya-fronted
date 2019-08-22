@@ -1,6 +1,7 @@
 import { Component, OnInit, AfterViewChecked, Input, Output, EventEmitter } from '@angular/core';
 import { ProducerService } from 'src/app/services/producer.service';
 import Swal from 'sweetalert2';
+import {UserService} from '../../services/user.service';
 
 declare let paypal: any;
 
@@ -10,8 +11,9 @@ declare let paypal: any;
   styleUrls: ['./paypal.component.css']
 })
 export class PaypalComponent implements OnInit,AfterViewChecked {
-  @Input() amount: number;
+  @Input() amount: any;
   @Input() account: String;
+  @Input() idProduct: String
 
   @Output() isPayment: boolean;
   @Output() notify = new EventEmitter();
@@ -21,9 +23,11 @@ export class PaypalComponent implements OnInit,AfterViewChecked {
   addScript: boolean = false;
   private paypalConfig: any;
 
-  constructor(private producerService: ProducerService) { }
+  constructor(private producerService: ProducerService, private userService: UserService) { }
 
   ngOnInit() {
+
+    console.log("la cantidad que queremos pagar",this.amount);
 
     this.paypalConfig ={
       env: 'sandbox',
@@ -44,9 +48,25 @@ export class PaypalComponent implements OnInit,AfterViewChecked {
       onAuthorize: (data, actions) => {
         return actions.payment.execute().then((payment)=>{
             this.notify.emit("compra realizada");
+
+            let user = this.userService._getUserData();
+            let data = {
+              amount: this.amount,
+              user : user._id ,
+              _idProducto : this.idProduct
+            }
+
+            console.log("los datos ...", data);
+
+            this.producerService.saveShop(data)
+            .then(res => {
+              console.log("lo que esta devolviendo");
+            });
         });
       }
     };
+
+
 
     this.getIdPaypal();
 
@@ -58,14 +78,16 @@ export class PaypalComponent implements OnInit,AfterViewChecked {
         let account_producer = res['item'].account;
         this.paypalConfig.client.sandbox = account_producer.id;
         this.isEnabled = true;
-      });
 
+        console.log("asjdhiasn",this.amount);
+      });
   }
 
   ngAfterViewChecked(): void{
     if(!this.addScript && this.isEnabled){
       this.addPaypalScript().then(()=>{
         paypal.Button.render(this.paypalConfig, '#paypal-checkout-btn');
+        console.log("kdkajshdajd",this.amount);
       })
     }
   }
@@ -78,9 +100,8 @@ export class PaypalComponent implements OnInit,AfterViewChecked {
       scripttagElement.onload = resolve;
       document.body.appendChild(scripttagElement);
 
+      console.log("asdasdasd",this.amount);
+
     })
   }
-
-
-
 }

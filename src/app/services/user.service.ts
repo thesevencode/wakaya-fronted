@@ -73,6 +73,10 @@ export class UserService {
     }
   }
 
+  _getUserData(){
+    return JSON.parse(localStorage.getItem('user'));
+  }
+
   loadNumberOfProducts(){
     console.log("la cantidad ",localStorage.getItem('shop'));
     let data = localStorage.getItem('shop')

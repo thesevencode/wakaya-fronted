@@ -25,7 +25,10 @@ export class ProducerService {
     return this.http.get(URL + '/producer/id_producer/'+_id).toPromise();
   }
 
-
+  saveShop(shopping) {
+    console.log("el registro de la venta que se va a realizar ... ", shopping);
+    return this.http.post(URL + '/product/by_categories', { shopping }).toPromise();
+  }
 
 
 }
