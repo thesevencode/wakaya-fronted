@@ -4,11 +4,13 @@ import { CommonModule } from '@angular/common';
 import { ClientRoutingModule } from './client-routing.module';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
+import { PaypalComponent } from './paypal/paypal.component';
 
 @NgModule({
   declarations: [
     ProductDetailComponent,
-    ProductListComponent
+    ProductListComponent,
+    PaypalComponent
   ],
   imports: [
     CommonModule,
@@ -16,7 +18,8 @@ import { ProductListComponent } from './product/product-list/product-list.compon
   ],
   exports : [
     ProductDetailComponent,
-    ProductListComponent
+    ProductListComponent,
+    PaypalComponent
   ]
 })
 export class ClientModule { }
