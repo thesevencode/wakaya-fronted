@@ -17,6 +17,7 @@ export class ProductDetailComponent implements OnInit {
   products = [];
   limit ;
   compra = 0;
+  total;
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -27,19 +28,24 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
     this.getProduct();
-    // this.getProductsByCategories();
+    let numero = this.userService.loadNumberOfProducts();
   }
 
   buyProduct(){
+    
     if (this.userService._isLogged() == true){
       console.log("compraremos algo ");
     }else{
-      console.log("vamos al login");
-      let data = true;
-      this.userService._saveStorageLogin(this.id);
+      let data = {
+        _id : this.id,
+        shop : this.compra
+      };
+      this.userService._saveStorageLogin(data);
       this.router.navigate([`/home/login`]);
 
     }
+
+
   }
 
   getProduct(){
@@ -47,13 +53,12 @@ export class ProductDetailComponent implements OnInit {
       .then(res => {
         this.product = res['item'];
         this.limit = res['item'].stock;
-
-        // console.log("El dato que se esta regresando ... " , this.product);
         // this.getProductsByCategories(res['item'].categories);
       }); 
   }
 
   dismisStock(){
+
     if(this.product.stock <= 0){
       console.log("kya no se puede añadir ");
     }else{
@@ -77,6 +82,4 @@ export class ProductDetailComponent implements OnInit {
         this.products = res['item'];
       });
   }
-
-
 }

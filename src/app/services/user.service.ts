@@ -21,6 +21,7 @@ export class UserService {
     private router: Router
   ) {
     this._loadStorage();
+
   }
   _sign_up(user, data) {
     const url = URL + '/auth/register';
@@ -72,6 +73,12 @@ export class UserService {
     }
   }
 
+  loadNumberOfProducts(){
+    console.log("la cantidad ",localStorage.getItem('shop'));
+    let data = localStorage.getItem('shop')
+    return parseInt(data);
+  }
+
   _loadStorageLogin(){
     if(localStorage.getItem('dataLogin') == null){
       return false;
@@ -81,8 +88,11 @@ export class UserService {
   }
 
   _saveStorageLogin(data){
-    localStorage.setItem('dataLogin', data);
+    localStorage.setItem('dataLogin', data._id);
+    localStorage.setItem('shop',data.shop);
   }
+
+
 
   _logout() {
     this.token = '';
