@@ -71,6 +71,19 @@ export class UserService {
       this.user = null;
     }
   }
+
+  _loadStorageLogin(){
+    if(localStorage.getItem('dataLogin') == null){
+      return false;
+    }else{
+      return localStorage.getItem('dataLogin');
+    }
+  }
+
+  _saveStorageLogin(data){
+    localStorage.setItem('dataLogin', data);
+  }
+
   _logout() {
     this.token = '';
     this.user = null;

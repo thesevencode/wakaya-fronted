@@ -519,6 +519,7 @@ main {
   position: relative;
 }
 .wky__cards_button .wky__text_button {
+  cursor: pointer;
   display: flex;
   align-items: center;
   color: var(--blue_0);

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CategorieService } from 'src/app/services/categorie.service';
 import { ProductService } from 'src/app/services/product.service';
 
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -15,7 +17,8 @@ export class ProductListComponent implements OnInit {
 
   constructor(
     private categorieService: CategorieService,
-    private productService: ProductService
+    private productService: ProductService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -37,6 +40,10 @@ export class ProductListComponent implements OnInit {
 
   }
 
+  changeRoutes(idx) {
+    console.log("la vista esta cambiando",idx);
+        this.router.navigate([`/home/producto/${idx}`]);
+  }
 
   getCategories() {
     this.categorieService.getAllCategories()

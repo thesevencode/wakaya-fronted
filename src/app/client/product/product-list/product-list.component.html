@@ -30,7 +30,7 @@
                   <!-- <span class="wky__last_price"> {{p.price}} </span> -->
                   <span class="wky__price"> {{p.price}}</span>
                   <div class="wky__card_content">
-                    <a [routerLink]="['../producto/5875877']"><p>{{ p.description}}</p></a>
+                    <a (click)="changeRoutes(p._id)" style="cursor:pointer"><p>{{ p.description}}</p></a>
                     <p>{{ p.categories}}</p>
                     <p class="wky__card_stars">
                         <span><i class="fas fa-star"></i></span>

@@ -10,13 +10,13 @@
                     <div class="wky__images">
                         <div class="wky__small_images">
                             <a href=""><img src="img/descarga.jpg" alt=""></a>
-                            <a href="" class="wky__active"><img src="img/descarga.jpg" alt=""></a>
-                            <a href=""><img src="img/descarga.jpg" alt=""></a>
-                            <a href=""><img src="img/descarga.jpg" alt=""></a>
-                            <a href=""><img src="img/descarga.jpg" alt=""></a>
+                            <a href="" class="wky__active"><img src="../../../assets/img/descarga.jpg" alt=""></a>
+                            <a href=""><img src="../../../assets/img/descarga.jpg" alt=""></a>
+                            <a href=""><img src="../../../assets/img/descarga.jpg" alt=""></a>
+                            <a href=""><img src="../../../assets/img/descarga.jpg" alt=""></a>
                         </div>
                         <div class="wky__big_image">
-                            <img src="img/descarga.jpg" alt="">
+                            <img src="../../../assets/img/descarga.jpg" alt="">
                         </div>
                     </div>
                     <div class="wky__card_publicaciones">
@@ -26,7 +26,7 @@
                         <div class="wky__publicaciones">
                             <div class="wky__card">
                                 <div class="wky__card_body">
-                                    <!-- <img src="img/descarga.jpg" alt=""> -->
+                                    <img src="../../../assets/img/descarga.jpg" alt="">
                                     <ul>
                                         <li>
                                             <span class="wky__card_badge">-10%</span>
@@ -46,7 +46,7 @@
                             </div>
                             <div class="wky__card">
                                 <div class="wky__card_body">
-                                    <img src="img/descarga.jpg" alt="">
+                                    <img src="../../../assets/img/descarga.jpg" alt="">
                                     <ul>
                                         <li>
                                             <span class="wky__card_badge">-10%</span>
@@ -87,13 +87,26 @@
                             </li>
                         </ul>
                         <div class="wky__big_prices">
-                            <span class="wky__big_price">{{product.price}}
+                            <span class="wky__big_price">{{product.stock}}
                                 <!-- <span class="wky__big_decimal">99</span> -->
                             </span>
                             <!-- <span class="wky__big_lastprice">
                                 $ 69.00
                             </span> -->
                         </div>
+                        <div>
+                            comprar : <button (click)="dismisStock()">Añadir compra</button>                           
+                        </div>
+                        <div>
+                                ya no quiero :
+                                <button (click)="addStock()">Devolver</button>
+                             </div>
+                        <hr>
+
+                        <div style="font-weight:bold">
+                            cantidad comprada : {{compra}}
+                        </div>
+
                         <div class="wky__big_name">
                             {{product.name}}
                         </div>
@@ -109,10 +122,10 @@
                         </div>
                         <div class="wky__big_soldout">20 vendidos</div>
                         <div class="wky__big_available">
-                            Disponibles: <strong>{{product.stock}}</strong>
+                            Disponibles: <strong></strong>
                         </div>
                         <div class="wky__big_quantity">
-                            cantidad: <strong>{{product.stock}} Unidad</strong>
+                            Precio: <strong>{{product.price}} soles</strong>
                         </div>
                         <div class="wky__big_creditcards">
                             pagar con:
@@ -125,7 +138,7 @@
                                         <i class="fas fa-shopping-cart"></i>
                                     </a>
                                 </div>
-                                <div class="wky__text_button">
+                                <div class="wky__text_button" (click)="buyProduct()">
                                     Comprar
                                 </div>
                             </div>

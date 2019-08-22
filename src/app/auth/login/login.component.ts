@@ -53,7 +53,17 @@ export class LoginComponent implements OnInit {
           .subscribe(resp => {
             Swal.hideLoading();
             Swal.close();
-            this.router.navigate(['/']);
+
+            console.log("veremos si trae false",this.userService._loadStorageLogin())
+
+            if(this.userService._loadStorageLogin() == false){
+              this.router.navigate(['/']);
+            }else if(this.userService._loadStorageLogin() != false){
+              
+              this.router.navigate([`/home/producto/${this.userService._loadStorageLogin()}`]);
+            }
+            
+            
           });
       },
     });
